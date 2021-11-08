@@ -1,0 +1,87 @@
+.slider {
+  &__carousel {
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  &__caption {
+    position: absolute;
+    padding: 20px 0;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: $color-light;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-family: $font-header;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+
+  &__indicators {
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 5px;
+    transform: translate(50%, 0);
+
+    & li {
+      width: 30px;
+      height: 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+  }
+}
+
+.opacity {
+  height: 100vh;
+  background-color: black;
+  opacity: 70%;
+}
+
+.arrow__next-slide,
+.arrow__prev-slide {
+  padding: 48vh 20px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 2rem;
+  z-index: 50;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.arrow__prev-slide {
+  left: 5%;
+}
+
+.arrow__next-slide {
+  right: 5%;
+}

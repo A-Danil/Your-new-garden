@@ -1,0 +1,94 @@
+.contacts {
+  background-color: $color-light;
+
+  &__form {
+    @include lg-min {
+      margin: auto;
+      max-width: 66.666%;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  & textarea {
+    height: auto;
+    font-family: inherit;
+  }
+}
+
+.flex {
+  padding: 0 5px;
+
+  @include sm-min {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-btn {
+  margin: 0 auto;
+
+  @include sm-min {
+    max-width: 50%;
+  }
+  @include sm {
+    max-width: 100%;
+  }
+
+  & button {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    display: block;
+    width: 100%;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      color: $color-light;
+    }
+  }
+}
+
+.lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}

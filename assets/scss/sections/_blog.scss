@@ -1,0 +1,125 @@
+.blog {
+  background-color: $color-light-gray;
+
+  &__item {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include lg-min {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    :hover {
+      img {
+        transform: scale(1.25);
+        filter: saturate(1.5);
+      }
+
+      .blog__post {
+        background-color: $color-accent;
+      }
+
+      .blog__title,
+      .blog__date,
+      .blog__excerpt {
+        color: $color-light;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include lg-min {
+      & article:nth-of-type(3) {
+        & .blog__post {
+          order: -1;
+        }
+      }
+      & article:nth-of-type(4) {
+        & .blog__post {
+          order: -1;
+        }
+      }
+    }
+
+    @include lg-md {
+      & article:nth-of-type(2) {
+        & .blog__post {
+          order: -1;
+        }
+      }
+      & article:nth-of-type(4) {
+        & .blog__post {
+          order: -1;
+        }
+      }
+    }
+  }
+
+  &__item-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &__image {
+    overflow: hidden;
+    padding: 0;
+
+    @include md-min {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    & img {
+      vertical-align: middle;
+      border-style: none;
+      width: 100%;
+      filter: saturate(0.75);
+      transition: 0.5s;
+
+      @include md {
+        margin-top: -10%;
+        margin-bottom: -35%;
+      }
+    }
+  }
+
+  &__post {
+    position: relative;
+    z-index: 0;
+    padding: 15px;
+    background-color: $color-light;
+    transition: 0.5s;
+
+    @include md-min {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__date {
+    margin: 15px 0;
+    color: $color-gray;
+    font-size: 0.875rem;
+    text-align: start !important;
+  }
+
+  &__excerpt {
+    color: $color-gray;
+    font-size: 0.875rem;
+    margin: 15px 0 0;
+    text-align: start !important;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,63 @@
+.about {
+  background-color: $color-light;
+
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__text,
+  &__stat {
+    @include lg-min {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__text {
+    & p {
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: $color-gray;
+      line-height: 1.5;
+    }
+  }
+
+  &__stat {
+    width: 100%;
+
+    @include lg-min {
+      padding-left: 80px;
+    }
+    @include lg {
+      margin-top: 3rem;
+    }
+  }
+
+  &__stat-item {
+    margin-bottom: 30px;
+  }
+
+  &__progress {
+    height: 20px;
+    overflow: hidden;
+    background-color: $color-light-gray;
+    display: flex;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+.progress-bar {
+  background-color: $color-accent !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #007bff;
+  transition: width 0.6s ease;
+}

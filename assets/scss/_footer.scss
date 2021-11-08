@@ -1,0 +1,162 @@
+.footer {
+  background-color: $color-light-dark;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 45px;
+  padding-bottom: 30px;
+
+  & a {
+    color: $color-gray3;
+  }
+
+  & p {
+    color: $color-gray4;
+  }
+
+  & h3 {
+    color: $color-gray3;
+
+    &::first-letter {
+      color: $color-accent;
+    }
+  }
+
+  &__caption {
+    color: $color-gray3;
+
+    @include lg-min {
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+    }
+    @include lg-md {
+      margin-bottom: 1.5rem;
+    }
+
+    & p {
+      margin-bottom: 1rem;
+      text-align: start !important;
+    }
+  }
+
+  &__contacts {
+    @include lg-min {
+      margin-left: auto;
+    }
+    @include lg {
+      margin-left: -15px;
+    }
+  }
+
+  &__categories,
+  &__menu {
+    @include sm {
+      margin-left: -15px;
+    }
+  }
+
+  &__contacts,
+  &__categories,
+  &__menu {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include lg-min {
+      flex: 0 0 19.444446%;
+      max-width: 19.444446%;
+    }
+    @include lg-sm {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+    @include sm {
+      width: 100%;
+    }
+
+    & ul {
+      list-style: none;
+      padding-left: 30px;
+
+      @include sm {
+        margin-bottom: 1rem;
+      }
+
+      & li {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          margin-left: -30px;
+          content: "\f30b";
+          color: #b2b2b2;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+
+        & a {
+          text-decoration: none;
+
+          &:hover {
+            color: $color-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: $color-gray5;
+  padding: 30px 0;
+
+  &__copy {
+    text-align: center;
+
+    & a {
+      color: $color-gray4;
+      text-decoration: none;
+      transition: 0.5s;
+
+      &:hover,
+      &:focus {
+        color: $color-light;
+      }
+    }
+  }
+}
+
+.back2top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0.2;
+  border-bottom: none;
+  border-radius: 4px;
+  background-color: $color-dark;
+
+  &:hover {
+    opacity: 1;
+
+    & i {
+      top: 1px;
+    }
+  }
+
+  & i {
+    position: relative;
+    top: 15px;
+    margin: 0;
+    transition: top 0.3s;
+    color: $color-light;
+    font-size: 1rem;
+  }
+}
