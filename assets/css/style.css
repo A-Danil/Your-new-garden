@@ -200,6 +200,26 @@ h5 {
   background-color: rgba(1, 1, 1, 0.85);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5cdcd;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ee3b24;
+  border-radius: 8px;
+  border: 2px solid #f5cdcd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91414;
+}
+
 .slider__carousel {
   position: relative;
 }

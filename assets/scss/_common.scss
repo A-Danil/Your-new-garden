@@ -19,7 +19,6 @@ section {
 .blog,
 .advantages__content,
 .contacts {
-  // min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -136,4 +135,24 @@ h5 {
 .show {
   top: 99% !important;
   background-color: rgba(1, 1, 1, 0.85);
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}  
+
+::-webkit-scrollbar-track {
+  background: #f5cdcd;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}   
+
+::-webkit-scrollbar-thumb {
+  background: $color-accent;
+  border-radius: 8px; 
+  border: 2px solid #f5cdcd; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91414;
 }
