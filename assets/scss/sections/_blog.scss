@@ -79,14 +79,21 @@
     @include md-min {
       flex: 0 0 50%;
       max-width: 50%;
+      width: 270px;
+      height: 245px;
     }
 
+    @include md{
+      width: 100%;
+    }
+    
     & img {
       vertical-align: middle;
       border-style: none;
       width: 100%;
       filter: saturate(0.75);
       transition: 0.5s;
+      margin-top: -40%;
 
       @include md {
         margin-top: -10%;

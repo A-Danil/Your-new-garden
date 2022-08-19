@@ -476,6 +476,7 @@ h5 {
   transition: transform 0.5s, -webkit-transform 0.5s;
   vertical-align: middle;
   border-style: none;
+  margin-top: -40%;
 }
 .gallery__caption {
   position: absolute;
@@ -587,6 +588,7 @@ h5 {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  margin-top: -40%;
 }
 .blog__post {
   position: relative;
@@ -926,6 +928,8 @@ h5 + p {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+    width: 270px;
+    height: 245px;
   }
   .blog__post {
     -webkit-box-flex: 0;
@@ -1182,6 +1186,9 @@ h5 + p {
   }
   .features__icon i {
     font-size: 1.5rem;
+  }
+  .blog__image {
+    width: 100%;
   }
   .blog__image img {
     margin-top: -10%;
